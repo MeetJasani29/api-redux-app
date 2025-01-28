@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "11539",
+      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ29E6dxXBKsCgKL4hvL6KnhR8t9H-PHlPEXez4m8WZs5trrs3YWZlEoVVLF7QvczVgxK0TLEjeWncwx07AMr5eR_m7PiSLfdTUtAyIq7x9_3Dmf1xdBmNVY4UOjW5JIaIafzFI5FfwLOw&usqp=CAc",
+      "title": "Plantex Stainless Steel Self-Adhesive Multipurpose Bathroom Shelf with Hooks",
+      "description": "cccccccccc",
+      "price": "1466",
+      "disPrice": "999",
+      "productType": "Sports",
+      "brand": "zara"
+    },
+    {
+      "id": "54488",
+      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT39n6TCzH51ntmXf8A2C6KIB85-OZ6_TqY9hTJc6xK7lF9Yn-UlyaYpmrLgooXFZ-4LCU39ZtaosqoCmKzNvT336pvr2n8KSp3Gpv1XbftETNM10aE8ZWok4PWpBP9DxIicvkcGEg&usqp=CAc",
+      "title": "BASIC HEAVY WEIGHT T-SHIRT",
+      "description": "Relaxed fit T-shirt made of compact cotton. Featuring a round neck and short sleeves.",
+      "price": "2000",
+      "productType": "Fashion",
+      "disPrice": "1599",
+      "brand": "H&M"
+    }
+  ]
+}
