@@ -1,8 +1,8 @@
+import Addlibrary from "./components/addlibrary";
+import Editlibrary from "./components/editlibrary";
 import Header from "./components/header";
 import Home from "./components/home";
 import { Route, Routes } from "react-router";
-import AddProduct from "./components/addProduct";
-import EditProduct from "./components/editproduct";
 
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/addproduct" element={<AddProduct />} />
-        <Route path="/edit/:id" element={<EditProduct />} />
+        <Route path="/addlibrary" element={<Addlibrary/>} />
+        <Route path="/edit/:id" element={<Editlibrary />} />
       </Routes>
     </>
   )

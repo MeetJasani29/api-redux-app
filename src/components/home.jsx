@@ -1,49 +1,71 @@
-// import { useNavigate } from "react-router";
+import './library.css';
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { getAllProductAsync, getAllProducts, deleteproductAsync } from "../services/action/Product.action";
+import { useEffect, useState } from "react";
+import { getAlllibraryAsync, deletelibraryAsync } from "../services/action/library.action";
 import { useNavigate } from "react-router";
 
-
 const Home = () => {
-    const { products, isLoading } = useSelector((state) => state.productReducer);
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+  const { librarys, isLoading } = useSelector((state) => state.libraryReducer);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-    const handleDelet = (id) => {
-        dispatch(deleteproductAsync(id))
-    }
+  const handleDelet = (id) => {
+    dispatch(deletelibraryAsync(id))
+  };
 
-    const handleEdit = (id) => {
-        navigate(`/edit/${id}`)
-    }
+  const handleEdit = (id) => {
+    navigate(`/edit/${id}`)
+  };
 
-    useEffect(() => {
-        dispatch(getAllProductAsync());
-    }, []);
+  useEffect(() => {
+    dispatch(getAlllibraryAsync());
+  }, [dispatch]);
 
-    return (
-        <div className="container d-flex">
-          {isLoading ? (
-            <h2>Loading....</h2>
-          ) : products.length === 0 ? (
-            <h4>No Data Found</h4>
-          ) : (
-            products.map((product) => (
-              <div className="card" style={{ width: "18rem", margin: "1rem" }} key={product.id}>
-                <img src={product.image} className="card-img-top" alt={product.title} />
-                <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.brand}</p>
-                  <p className="card-price mt-0">₹ {product.disPrice} <del>{product.price}</del></p>
-                  <button className="delbtn" onClick={() => handleDelet(product.id)} style={{ marginRight: "0.5rem" }}> Delete    </button>
-                  <button className="editbtn" onClick={() => handleEdit(product.id)}>Edit</button>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-      );
-    };
-    
-    export default Home;
+
+  return (
+    <div className="container">
+      {isLoading ? (
+        <h2 className="text-black text-center mt-3">Loading....</h2>
+      ) :  librarys.length === 0 ? (
+        <h4>No Data Found</h4>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th> Author</th>
+              <th>Publisher</th>
+              <th>Category</th>
+              <th>Quantity on Hand</th>
+              <th>Unit Price</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            { librarys.map((library) => (
+              <tr key={library.id}>
+                <td>{library.id}</td>
+                <td>{library.title}</td>
+                <td>{library.author}</td>
+                <td>{library.publisher}</td>
+                <td>{library.libraryType}</td>
+                <td>{library.quantity}</td>
+                <td>{library.price}</td>
+                <td>
+                  <button className="editbtn" onClick={() => handleEdit(library.id)}>Edit</button>
+                </td>
+                <td>
+                  <button className="delbtn" onClick={() => handleDelet(library.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
+  );
+};
+
+export default Home;

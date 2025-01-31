@@ -1,0 +1,214 @@
+
+.library-header {
+   background-color: #343a40; 
+   padding: 10px 0;
+}
+
+.library-header .logo {
+   font-size: 22px;
+   font-weight: bold;
+   color: white;
+}
+
+.library-header .nav-link {
+   color: white;
+   margin-right: 15px;
+   font-size: 18px;
+   transition: 0.3s;
+}
+
+.library-header .nav-link:hover {
+   color: #ffc107 !important; 
+}
+
+.library-header .form-control {
+   border-radius: 20px;
+   padding: 8px;
+   border: none;
+}
+
+.library-header .btn-outline-light {
+   border-radius: 20px;
+   border: 1px solid white;
+   color: white;
+}
+
+.library-header .btn-outline-light:hover {
+   background-color: #ffc107;
+   color: black;
+}
+
+.navbar-brand:hover{
+   color: white !important;
+}
+
+.form-control:focus, .form-select:focus {
+   border-color: transparent !important;
+   box-shadow: none !important;
+}
+.form-select:focus, textarea {
+   border: 1px solid #dee2e6 !important; 
+}
+.form-control , .form-select {
+   background-color: rgba(255, 255, 255, 0.74) !important;
+   color: black !important;
+}
+.form-select {
+   background-color: #fff;
+}
+.library-form {
+   position: relative;
+   margin-top: 30px;
+   padding: 30px;
+   justify-content: center;
+   background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 10px;
+   color: white; 
+}
+
+.library-form::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 10px;
+   z-index: 1;
+}
+
+.library-form * {
+   position: relative;
+   z-index: 2;
+}
+
+h2, .form-label {
+   color: white !important;
+}
+
+button, .prbtn {
+   border: none;
+   border-radius: 5px;
+   color: white !important;
+   transition: all 0.3s linear;
+}
+
+.prbtn {
+   background-color: #ffc107;
+   margin: 0 auto;
+   padding: 10px 15px;
+   text-align: center;
+}
+
+.prbtn:hover {
+   background-color: #744242;
+}
+
+
+
+.card-img-top {
+   width: 100%;
+   height: 250px;
+}
+
+.card-text {
+   font-size: 18px;
+}
+
+.card-price {
+   color: black;
+   font-weight: 600;
+}
+
+.center-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   width: 100%;
+   max-width: 1200px; 
+   margin: auto;
+ }
+ 
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+ }
+ 
+ th, td {
+   border: 1px solid #ddd;
+   padding: 10px;
+   text-align: center !important;
+ }
+ 
+ th {
+   background-color: #333;
+   color: white;
+ }
+ 
+ td {
+   background-color: #f9f9f9;
+   text-align: center;
+ }
+ 
+ button {
+   padding: 5px 10px;
+   border: none;
+   cursor: pointer;
+   background-color: #441717;
+   border-radius: 5px !important;
+   color: white;
+   border-radius: 5px;
+ }
+ 
+ button:hover {
+   background-color: #0056b3;
+ }
+
+ @media (max-width: 768px) {
+   table {
+     display: block;
+     overflow-x: auto;
+     white-space: nowrap;
+   }
+ }
+
+ .editbtn {
+   background-color: #28a745; /* Green */
+   color: white;
+   border: none;
+   padding: 6px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background 0.3s ease-in-out;
+ }
+ 
+ .editbtn:hover {
+   background-color: #218838; /* Darker Green */
+ }
+ 
+ .delbtn {
+   background-color: #dc3545; /* Red */
+   color: white;
+   border: none;
+   padding: 6px 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background 0.3s ease-in-out;
+ }
+ 
+ .delbtn:hover {
+   background-color: #c82333; /* Darker Red */
+ }
+ 
+
+
+ 
+ 

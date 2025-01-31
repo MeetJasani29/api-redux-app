@@ -1,13 +1,13 @@
 const initalState = {
-    products: JSON.parse(localStorage.getItem('products')) || [],
-    product: null,
+    librarys: JSON.parse(localStorage.getItem('librarys')) || [],
+    library: null,
     isCreated: false,
     isLoading: false,
     isUpdated:false,
     error: null,
 }
 
-export const productReducer = (state = initalState , action ) => {
+export const libraryReducer = (state = initalState , action ) => {
 
     switch (action.type) {
         case"LOADING" : 
@@ -15,38 +15,38 @@ export const productReducer = (state = initalState , action ) => {
             ...state,
             isLoading: true
         } 
-        case "ADD_NEW_PRODUCT":
+        case "ADD_NEW_LIBRARY":
         return{
             ...state,
             isCreated: true,
         }
 
-        case "GET_ALL_PRODUCTS":
+        case "GET_ALL_LIBRARYS":
             return {
                 ...state,
-                products: action.payload,
+                librarys: action.payload,
                 isLoading: false,
                 isCreated: false,
                 isUpdated: false
             }
 
-            case "ADD_NEW_PRODUCT_REJ": 
+            case "ADD_NEW_LIBRARY_REJ": 
         return {
             ...state,
             error: action.payload
         }
 
-        case "SINGLE_PRODUCT":
+        case "SINGLE_LIBRARY":
             return{
                 ...state,
-                product: action.payload
+                library: action.payload
             }
 
-            case "UPDATE_PRODUCT":
+            case "UPDATELIBRARY":
                 return{
                     ...state,
                     isUpdated:true,
-                    product:null
+                    library:null
                 }
         default:
             return state;
